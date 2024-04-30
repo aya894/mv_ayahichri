@@ -36,8 +36,8 @@
                     <span>{{ mix.genre }}</span>
                     |
                     <span>{{ mix.createdAt|ago }}</span>
-                    <br>
-                    {{ mix.votesString }} votes
+                    |
+                    <span>{{ mix.votesString() }} votes</span>
                 </div>
             </div>
             {% endfor %}
