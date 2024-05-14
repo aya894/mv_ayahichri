@@ -40,7 +40,7 @@ class VinylMixRepository extends ServiceEntityRepository
                 ->getResult()
             ;
         }
-        public function findAllOrderedByVotes(string $genre = null): array
+        public function createOrderedByVotesQueryBuilder(string $genre = null): QueryBuilder
         {
             $queryBuilder = $this->addOrderByVotesQueryBuilder();
             if ($genre) {
@@ -48,9 +48,7 @@ class VinylMixRepository extends ServiceEntityRepository
                     ->setParameter('genre', $genre);
             }
             return $queryBuilder
-            ->getQuery()
-            ->getResult()
-        ;
+            ;
     }
 
 //    public function findOneBySomeField($value): ?VinylMix
