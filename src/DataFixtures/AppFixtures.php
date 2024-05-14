@@ -17,5 +17,6 @@ class AppFixtures extends Fixture
         $mix->setTrackCount(rand(5, 20));
         $mix->setVotes(rand(-50, 50));
         $manager->persist($mix);
+        $manager->flush();
     }
 }
